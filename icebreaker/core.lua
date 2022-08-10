@@ -3,14 +3,19 @@
 state={}
 function _init()
   state.cell_size = 32
+  state.tiles_per = 4
   state.map       = {}
   state.mobs      = {}
-  state.debug     = ""
-  state.error     = ""
-  state.UP        = 1
-  state.DOWN      = 2
-  state.RIGHT     = 3
-  state.LEFT      = 4
+  state.msg       = ""
+  state.error     = "DEBUG MODE"
+  state.LEFT      = 0
+  state.RIGHT     = 1
+  state.UP        = 2
+  state.DOWN      = 3
+  state.spd       = 32
+  state.DEBUG     = true
+
+  map:init()
 end
 
 function _update60()
@@ -18,6 +23,7 @@ function _update60()
 end
 
 function _draw()
-
+  
+  if(DEBUG) print(state.error, 20,120,8)
 end
 
