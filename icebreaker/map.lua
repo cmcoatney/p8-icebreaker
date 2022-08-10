@@ -9,3 +9,11 @@ function map:init()
   tile.isSlippery = false
   add(state.map,tile)
 end
+
+function map:draw()
+
+  for tile in all(state.map) do
+    spr(tile.spr,tile.x,tile.y,4,4)
+  end
+
+end

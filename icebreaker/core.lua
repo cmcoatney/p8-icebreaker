@@ -14,6 +14,7 @@ function _init()
   state.DOWN      = 3
   state.spd       = 32
   state.DEBUG     = true
+  state.WATER     = 1
 
   map:init()
 end
@@ -23,6 +24,9 @@ function _update60()
 end
 
 function _draw()
+
+  cls(state.WATER)
+  map:draw()
   
   if(DEBUG) print(state.error, 20,120,8)
 end
